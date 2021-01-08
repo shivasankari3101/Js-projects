@@ -11,6 +11,9 @@ body{
 .clock{
     width: 25vw;
     height: 25vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background:url("images/clock.png");
     background-color: #fff;
     background-size: cover;
@@ -20,3 +23,58 @@ body{
                0 0 0 1.2rem #fff;
 }
 
+
+.clock::before{
+    content: "";
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    background-color: rgba(0,0,0);
+    border-radius: 50%;
+    z-index: 10;
+}
+
+#hour,#min,#sec{
+    position: absolute;
+    bottom: 50%;
+    border-radius: 6px 6px 0 0;
+    transform-origin: bottom;
+}
+
+#hour{
+    width: 0.8rem;
+    height: 6rem;
+    background-color: #8d8c91;
+    z-index: 2;
+    animation: rotate 3600s;
+}
+
+#min{
+    width: 0.5rem;
+    height: 8rem;
+    background-color: #c5c3c9;
+    z-index: 1;
+}
+
+#sec{
+    width: 0.3rem;
+    height: 9rem;
+    background-color: red;
+    z-index: 0;
+}
+
+
+
+@media screen and (max-width:768px){
+    .clock{
+        width: 70vw;
+        height: 70vw;
+    }   
+}
+
+@media screen and (max-width:576px){
+    .clock{
+        width: 60vw;
+        height: 60vw;
+    }   
+}
