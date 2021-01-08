@@ -31,7 +31,7 @@ body{
     position: absolute;
     width: 1rem;
     height: 1rem;
-    background-color: rgba(0,0,0);
+    background-color: #d3d3d3;
     border-radius: 50rem;
     z-index: 10;
 }
@@ -53,7 +53,7 @@ body{
 #min{
     width: 0.5rem;
     height: 8rem;
-    background-color: #c5c3c9;
+    background-color:#636266;
     z-index: 1;
 }
 
