@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="timer.css">
+    </head>
+    <body>
+        <!-- <img src="images/timer_bg.svg" class="timer_bg" alt=""> -->
+        <div class="section1">
+            <div>
+                <img src="images/home_pic.svg" alt="" srcset="">
+                <h1>TIMER</h1>
+            </div>
+            <span><i class="fa fa-clock-o fa-2x" aria-hidden="true" onclick="scroll_up()"></i></span>
+
+        </div>
+        <div class="section2">
+        <div class="pop_msg">
+            <img src="images/pop_bg.svg" alt="" srcset="">
+            <span>Time's up!!</span>
+            <button id="back">OK</button>
+            
+        </div>
+        <nav>
+            <span>Timer</span>
+        </nav>
+        <div class="timer_container">
+        <div class="timer_words">
+            <div>Hours</div>
+            <div>Minutes</div>
+            <div>Seconds</div>
+        </div>
+        <div class="timers">
+            <input type="number" name="" id="hrs" placeholder="00" class="time">
+            <input type="number" name="" id="min" placeholder="00" class="time">
+            <input type="number" name="" id="sec" placeholder="00" class="time">
+        </div>
+        <div class="buttons">
+            <span id="start" onclick="start_timer()"><i class="fa fa-play" aria-hidden="true"></i></span>
+            <span id="stop" onclick="stop_timer()"><i class="fa fa-stop " aria-hidden="true"></i></span>
+        </div>
+    </div>
+    <span><i class="fa fa-chevron-circle-up fa-2x" onclick="scroll_down()" aria-hidden="true"></i></span>
+    
+</div>
+        <script src="timer.js"></script>
+    </body>
+</html>

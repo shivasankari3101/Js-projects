@@ -1,0 +1,145 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="todo.css">
+        
+    </head>
+    <body>
+        <div id="hero">
+        <div class="help">
+            <div class="header">
+            <h2>How to use?</h2>
+        <span class="back" onclick="showback()">Back</span>
+        </div>
+        <div class="slider">
+            <span class="slider_span" onclick="show1()">1</span>
+            <span class="slider_span" onclick="show2()">2</span>
+            <span class="slider_span" onclick="show3()">3</span>
+            <span class="slider_span" onclick="show4()">4</span>
+        </div>
+            <div class="instruction_main_content">
+            <div id="instruction_main_div">
+            <div id="instruction_content">
+                <div class="instruction instruction1">
+                    <img src="images/Add_tasks.png" >
+                    <h4>Add tasks</h4>
+                    <p>You can type the tasks you plan to do and click the "+"(Add) button.You will 
+                        also be given some suggestions for the tasks.</p>
+                </div>
+                <div class="instruction instruction2">
+                    <img src="images/Check_tasks.png" >
+                    <h4>Mark tasks</h4>
+                    <p>You can mark the tasks that you have completed by clicking on the blue checkbox.</p>
+                </div>
+                <div class="instruction instruction3">
+                    <img src="images/Pending_tasks.png" >
+                    <h4>Pending tasks</h4>
+                    <p>You can see the list of pending tasks in this section and work your plan.</p>
+                </div>
+                <div class="instruction instruction4">
+                    <img src="images/Completed_tasks.png" >
+                    <h4>Completed tasks</h4>
+                    <p>You can see the list of completed tasks in this section and praise yourself for your accomplishments.</p>
+                </div>
+            </div>
+        </div>
+           </div>
+        </div>
+        <div class="homepage">
+            <h3 class="howtouse" onclick="showhelp()">How to use</h3>
+            <div class="home_pic">
+                <img src="images/home_pic.svg" >
+                <hr>
+                <h1>TO-DO LIST</h1>
+                <h4><span class="getstarted" onclick="showtodo()">Start now</span></h4>
+            </div>
+        </div>
+        <div class="todolist">
+        <nav>
+            <i class="fa fa-arrow-left" onclick="showback()" aria-hidden="true"></i>       
+            <h1>TO-DO-LIST</h1>    
+            <span></span>
+        </nav>
+        <div class="main_content">
+            <div class="main_div">
+                <ul class="tabs">
+                    <li onclick="showcreate()" class="li">Create</li>
+                    <li onclick="showpending()" class="li">Pending</li>
+                    <li onclick="showcompleted()" class="li">Completed</li>
+                </ul>
+                <div id="content">
+                    <div class="create">
+                        <div id="add_element">
+                            <input list="to-do" id="input_box" type="text"
+                            placeholder="Enter your task"
+                            onfocus="this.placeholder=''"
+                            onblur="this.placeholder='Enter your task'">
+                            <span id="add_button" onclick="add_task()"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                        </div>
+                        <div id="task_list">
+                            <div class="task">
+                                <span class="circle"><i class="fa fa-check" aria-hidden="true"></i></span>
+                                <span class="task_item"></span>
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div  class="image image_1">
+                            <img src="images/Create.svg">
+                            <p>Plan your work</p>
+                        </div>
+                    </div>
+                    <div class="pending">
+                        <div id="pending_list">
+                            <div class="pending_task">
+                                <span class="pending_number"></span>&nbsp;&nbsp;&nbsp;
+                                <span class="pending_task_span"></span>
+                            </div>
+                        </div>
+                        <div  class="image image_2">
+                            <img src="images/Pending.svg">
+                            <p>Work your plan</p>
+                        </div>
+                        
+                    </div>
+                    <div class="completed">
+                        <div id="completed_list">
+                            <div class="completed_task">
+                                <span class="completed_number"></span>&nbsp;&nbsp;&nbsp;
+                                <span class="completed_task_span"></span>
+                            </div>
+                        </div>
+                        <div  class="image image_3">
+                            <img src="images/Completed.svg">
+                            <p>Praise yourself</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        
+        <datalist id="to-do">
+            <option value="Wake Up">
+            <option value="Cook">
+            <option value="Breakfast">
+            <option value="Lunch">
+            <option value="Dinner">
+            <option value="Snacks">
+            <option value="Meeting">
+          </datalist>
+
+    </body>
+    <script src="todo.js"></script>
+    <script>
+        setTimeout(function () {
+    var viewheight = $(window).height();
+    var viewwidth = $(window).width();
+    var viewport = $("meta[name=viewport]");
+    viewport.attr("content", "height=" + viewheight + "px, width=" + 
+    viewwidth + "px, initial-scale=1.0");
+}, 300);
+    </script>
+</html>

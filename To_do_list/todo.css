@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+body,html{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow: hidden;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+#hero{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+#hero>div{
+    position: absolute;
+}
+
+.help{
+    transform: translateY(-100vh);
+    width: 100vw;
+    height: 100vh;
+    background-color: #eeeeee;
+    position: relative;
+    color: #686d76;
+}
+
+.help>h1{
+    text-align: center;
+}
+
+.back{
+    color: #686d76;
+    background-color: #19d3da;
+    padding: 10px 15px 10px 15px;
+    border-radius: 10px;
+} 
+
+.back:hover{
+    transform: scale(1.15);
+}
+#instruction_main_div{
+    width: 40%;
+    min-height: 75vh;
+    height: fit-content;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+.instruction_main_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin: 2vh;
+}
+.header>h2{
+    margin: 0;
+}
+
+.slider{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
+}
+
+.slider span{
+    margin:1%;
+    color: #19d3da;
+    background-color: #fff;
+    padding: 10px;
+    padding-top: 3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#instruction_content{
+    position: relative;
+    color: #686d76;;
+}
+
+#instruction_content>div{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+}
+.instruction1{
+    transform: translateX(0);
+}
+.instruction2{
+    transform: translateX(100%);
+}
+.instruction3{
+    transform: translateX(200%);
+}
+.instruction4{
+    transform: translateX(300%);
+}
+
+.instruction img{
+    margin-top: 3%;
+    width: 20vw;
+    height: 50vh;
+    margin-left: 10vw;
+    margin-right: auto;
+}
+.instruction p,.instruction h4{
+    text-align: center;
+}
+.homepage{
+    width: 100vw;
+    height: 100vh;
+    transform: translateY(0);
+    position: relative;
+    background-color: #373a40;
+}
+
+.howtouse{
+    color: #eeeeee;
+    position: absolute;
+    right: 5vw;
+    top: 1vh;
+}
+
+.howtouse:hover{
+    color: #19d3da;
+}
+
+.home_pic{
+    position: absolute;
+    top: 20vh;
+    left: 20vw;
+    width: 60vw;
+    height: 30vh;
+}
+@keyframes pop{
+    0%{opacity: 0;transform: scale(0.5);}
+    50%{opacity: 1;transform: scale(1.2);}
+    100%{opacity: 1;transform: scale(1);}
+}
+.home_pic img{
+    width: 100%;
+    height: 100%;
+    animation: pop 0.8s ease-in-out;
+    animation-fill-mode: backwards;
+}
+.home_pic hr{
+    background-color: #fff;
+    margin-top: 6vh;
+    width: 60%;
+    animation: pop 0.6s ease-in-out;
+    animation-fill-mode: backwards;
+    animation-delay: 0.6s;
+}
+.home_pic h1{
+    text-align: center;
+    color: #eeeeee;
+    animation: slide_down 0.2s ease-in-out;
+    animation-fill-mode: backwards;
+    animation-delay:1.4s ;
+}
+
+@keyframes slide_down{
+    0%{opacity: 0;transform: translateY(-20px)}
+    100%{opacity: 1;transform: translateY(0px);}
+}
+
+.home_pic h4{
+    margin-top: 6vh;
+    text-align: center;
+    color: #686d76;
+}
+
+.home_pic span{
+    background-color: #19d3da;
+    padding: 10px;
+    border-radius: 10px;
+    animation: appear 0.6s ease-in-out;
+    animation-fill-mode: backwards;
+    animation-delay: 1.6s;
+}
+
+@keyframes appear{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+.home_pic span:hover{
+   border-radius: 8px;
+   padding: 12px;
+}
+
+.todolist{
+    transform: translateY(100vh);
+    width: 100vw;
+    height: 100vh;
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #373a40;
+    color: #eeeeee;
+    width: 100%;
+    position:fixed;
+    top: 0;
+    right: 0;
+    height: 10vh;
+    z-index: 1;
+}
+
+nav i{
+    margin-left: 3%;
+    cursor: pointer;
+}
+
+.main_content{
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+      
+}
+.main_div{
+    width: 40%;
+    min-height: 75vh;
+    height: fit-content;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+.tabs{
+    background-color: #373a40;
+    color: #19d3da;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.tabs li{
+    list-style-type: none;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding: 3%;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-bottom: 3px solid #373a40;
+    cursor: pointer;
+}
+
+.tabs li:hover{
+    border-bottom: 3px solid #fff;
+}
+
+#add_element{
+    margin:6% 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#input_box{
+    height: 35px;
+    width: 60%;
+    border: 0;
+    outline: 0;
+    padding-left: 5%;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius:0 ;
+    box-shadow: rgba(0,0,0,0.7) 0 0 -4px 0 inset;
+    background-color: #eeeeee;
+}
+
+#input_box::placeholder{
+    font-size: medium;
+}
+
+#add_button{
+    background-color: #19d3da;
+    color:rgba(0,0,0,0.5);
+    font-weight: bolder;
+    padding: 9.5px 10px 9.5px 10px;
+    border-top-right-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+#content{
+    position: relative;
+    color: #000;
+}
+
+#content>div{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#task_list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.task{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    height: 25px;
+    margin-top: 0.5vh;
+    background-color: #eeeeee;
+    padding: 2%;
+}
+
+.task_item{
+    color: #686d76;
+    font-weight: 300;
+    margin-right: 3%;
+    margin-left: 3%;
+    overflow: hidden;
+}
+
+.circle{
+    /* border: 1px solid #373a40; */
+    border-radius: 5px;
+    width:15px;
+    height:15px;
+    padding: 1%;
+    background-color:#19d3da ;
+}
+.circle i{
+    color: #686d76;
+    display: none;
+}
+
+.create{
+    transform: translateX(0);
+}
+.pending{
+    transform: translateX(100%);
+}
+.completed{
+    transform: translateX(200%);
+}
+
+
+.completed_list,.pending_list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.completed_task,.pending_task{
+    color: rgba(0,0,0,0.7);
+    margin-right: 3%;
+    margin-left: 3%;
+    overflow: hidden;
+    width: 70%;
+    height: 5vh;
+    margin:auto 10% 5% 10%;
+    margin-top: 5vh;
+    background-color: #eeeeee;
+    padding: 2%;
+    padding-left: 4%;
+    border-radius: 10px;
+    color: #686d76;
+}
+
+.image{
+    width: 60%;
+    height: 35vh;
+    margin-left: 20%;
+    margin-top: 8vh;
+    display: none;
+}
+
+.image_1{
+    margin-top: 0;
+}
+
+.image img{
+    width: 100%;
+    height: 85%;
+}
+.image p{
+    font-family: 'Niconne', cursive;
+    text-align: center;
+    color: #686d76;
+    font-size: 2em;
+}
+
+
+@media screen and (max-width:992px){
+    .main_div{
+        width: 60%;
+    }
+
+    .tabs li{
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width:576px){
+    .main_div{
+        width: 95%;
+    }
+    .tabs li{
+        font-size: 1rem;
+    }
+
+    #add_element{
+        margin-top: 10%;
+    }
+
+    #input_box{
+        width: 70%;
+    }
+    .task{
+        width: 76%;
+    }
+    .home_pic hr{
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width:768px){
+
+    #instruction_content{
+        width: 90vw;
+    }
+
+    #instruction_main_div {
+        width: 90vw;
+    }
+
+    .instruction img {
+        width: 70vw;
+        height: 50vh;
+        margin-left: 10vw;
+        margin-right: auto;
+    }
+
+    .instruction img{
+        margin-top: 1%;
+        width: 80vw;
+        height: 50vh;
+        margin-left: 5vw;
+        margin-right: auto;
+    }
+
+}
